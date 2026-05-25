@@ -71,17 +71,6 @@ nav{
   min-width:200px;
 }
 .nav-drawer a:active{background:rgba(0,245,200,.1)}
-.close-menu{
-  position:absolute;
-  top:25px;
-  right:25px;
-  background:none;
-  border:none;
-  color:var(--accent);
-  font-size:2rem;
-  cursor:pointer;
-  z-index:1200;
-}
 
 /* ── DESKTOP NAV ── */
 .nav-desktop{display:none;list-style:none;gap:2rem;align-items:center}
@@ -271,8 +260,7 @@ footer{padding:1.5rem var(--pad);border-top:1px solid rgba(255,255,255,.05);disp
 
 <!-- MOBILE DRAWER – outside nav so no stacking context issues -->
 <ul class="nav-drawer" id="drawer">
-  <button class="close-menu" onclick="closeDrawer()">✕</button>
-
+  <button onclick="closeDrawer()" style="position:absolute;top:1.25rem;right:1.5rem;background:none;border:1px solid rgba(0,245,200,.4);color:#00f5c8;font-size:1.5rem;width:44px;height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">✕</button>
   <li><a href="#skills"    onclick="closeDrawer()">Skills</a></li>
   <li><a href="#projects"  onclick="closeDrawer()">Projects</a></li>
   <li><a href="#education" onclick="closeDrawer()">Education</a></li>
@@ -330,7 +318,7 @@ footer{padding:1.5rem var(--pad);border-top:1px solid rgba(255,255,255,.05);disp
   <div class="skills-grid">
     <div class="skill-card"><span class="skill-icon">🤖</span><div class="skill-cat">AI / LLM</div><div class="skill-tags"><span class="skill-tag">LangChain</span><span class="skill-tag">LangGraph</span><span class="skill-tag">RAG</span><span class="skill-tag">Multi-Agent</span><span class="skill-tag">LLM APIs</span></div></div>
     <div class="skill-card"><span class="skill-icon">⚡</span><div class="skill-cat">Backend</div><div class="skill-tags"><span class="skill-tag">FastAPI</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">MySQL</span></div></div>
-    <div class="skill-card"><span class="skill-icon">🌐</span><div class="skill-cat">Frontend</div><div class="skill-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">WordPress</span></div></div>
+    <div class="skill-card"><span class="skill-icon">🌐</span><div class="skill-cat">Frontend</div><div class="skill-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">WordPress</span></div></div>
     <div class="skill-card"><span class="skill-icon">🚀</span><div class="skill-cat">Deployment</div><div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Vercel</span><span class="skill-tag">Render</span><span class="skill-tag">VS Code</span></div></div>
     <div class="skill-card"><span class="skill-icon">👁️</span><div class="skill-cat">Computer Vision</div><div class="skill-tags"><span class="skill-tag">OpenCV</span><span class="skill-tag">Face Recognition</span><span class="skill-tag">ML Models</span></div></div>
     <div class="skill-card"><span class="skill-icon">🌍</span><div class="skill-cat">Languages</div><div class="skill-tags"><span class="skill-tag">English</span><span class="skill-tag">Telugu</span><span class="skill-tag">Hindi</span></div></div>
@@ -493,7 +481,7 @@ ham.addEventListener('click',()=>{
 
 /* ── RESUME DOWNLOAD ── */
 /* 👇 PASTE YOUR RESUME LINK BELOW */
-const RESUME_URL = 'https://drive.google.com/file/d/1RuQs0bOAyB1res0MfKBuR8CtNP_Rk7zm/view?usp=sharing';
+const RESUME_URL = 'YOUR_RESUME_LINK_HERE';
 
 function downloadResume(){
   const toast=document.getElementById('toast');
